@@ -1,0 +1,454 @@
+XXXXXXXX:~/IdeaProjects/maven/test/test-app$ ~/java/apache-maven-3.2.1/bin/./mvn archetype:generate
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-archetype-plugin:2.4:generate (default-cli) @ standalone-pom >>>
+[INFO] 
+[INFO] <<< maven-archetype-plugin:2.4:generate (default-cli) @ standalone-pom <<<
+[INFO] 
+[INFO] --- maven-archetype-plugin:2.4:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Interactive mode
+[INFO] No archetype defined. Using maven-archetype-quickstart (org.apache.maven.archetypes:maven-archetype-quickstart:1.0)
+Choose archetype:
+1: remote -> am.ik.archetype:maven-reactjs-blank-archetype (Blank Project for React.js)
+2: remote -> am.ik.archetype:msgpack-rpc-jersey-blank-archetype (Blank Project for Spring Boot + Jersey)
+[skip....]
+250: remote -> com.rudolfschmidt:javase7-essentials-archetype (minimal pom for javase7 projects)
+[skip....]
+1560: remote -> us.fatehi:schemacrawler-archetype-plugin-lint (-)
+Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): 753: 250
+Choose com.rudolfschmidt:javase7-essentials-archetype version: 
+1: 1.0
+2: 1.1
+Choose a number: 2: 
+Define value for property 'groupId': : jmp
+Define value for property 'artifactId': : test-app
+Define value for property 'version':  1.0-SNAPSHOT: : 
+Define value for property 'package':  jmp: : 
+Confirm properties configuration:
+groupId: jmp
+artifactId: test-app
+version: 1.0-SNAPSHOT
+package: jmp
+ Y: : y
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Archetype: javase7-essentials-archetype:1.1
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: jmp
+[INFO] Parameter: artifactId, Value: test-app
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] Parameter: package, Value: jmp
+[INFO] Parameter: packageInPathFormat, Value: jmp
+[INFO] Parameter: package, Value: jmp
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] Parameter: groupId, Value: jmp
+[INFO] Parameter: artifactId, Value: test-app
+[INFO] project created from Archetype in dir: /home/aliaksandr/IdeaProjects/maven/test/test-app
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 47.757 s
+[INFO] Finished at: 2016-03-09T12:01:24+03:00
+[INFO] Final Memory: 16M/147M
+[INFO] ------------------------------------------------------------------------
+
+
+
+XXXXXXXX:~/IdeaProjects/maven/test/test-app$ ~/java/apache-maven-3.2.1/bin/./mvn test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building test-app 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ test-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ test-app ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ test-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ test-app ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ test-app ---
+[INFO] Surefire report directory: /home/aliaksandr/IdeaProjects/maven/test/test-app/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running jmp.maven.StringUtilsTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.052 sec
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.129 s
+[INFO] Finished at: 2016-03-09T12:29:46+03:00
+[INFO] Final Memory: 9M/104M
+[INFO] ------------------------------------------------------------------------
+
+
+
+XXXXXXXX:~/IdeaProjects/maven/test/test-app$ ~/java/apache-maven-3.2.1/bin/./mvn site
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building test-app 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-site-plugin:3.3:site (default-site) @ test-app ---
+[WARNING] Report plugin org.apache.maven.plugins:maven-project-info-reports-plugin has an empty version.
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[INFO] configuring report plugin org.apache.maven.plugins:maven-project-info-reports-plugin:2.9
+[WARNING] No project URL defined - decoration links will not be relativized!
+[INFO] Rendering site with org.apache.maven.skins:maven-default-skin:jar:1.0 skin.
+[INFO] Generating "Dependencies" report    --- maven-project-info-reports-plugin:2.9
+[INFO] Generating "Dependency Convergence" report    --- maven-project-info-reports-plugin:2.9
+[INFO] Generating "Dependency Information" report    --- maven-project-info-reports-plugin:2.9
+[INFO] Generating "About" report    --- maven-project-info-reports-plugin:2.9
+[INFO] Generating "Plugin Management" report    --- maven-project-info-reports-plugin:2.9
+[INFO] Generating "Plugins" report    --- maven-project-info-reports-plugin:2.9
+[INFO] Generating "Summary" report    --- maven-project-info-reports-plugin:2.9
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.508 s
+[INFO] Finished at: 2016-03-09T12:34:39+03:00
+[INFO] Final Memory: 20M/322M
+
+
+
+XXXXXXXX:~/IdeaProjects/maven/test/test-app$ ~/java/apache-maven-3.2.1/bin/./mvn package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building test-app 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ test-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ test-app ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ test-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ test-app ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ test-app ---
+[INFO] Surefire report directory: /home/aliaksandr/IdeaProjects/maven/test/test-app/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running jmp.maven.StringUtilsTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.072 sec
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ test-app ---
+[INFO] 
+[INFO] >>> findbugs-maven-plugin:3.0.3:check (execution1) @ test-app >>>
+[INFO] 
+[INFO] --- findbugs-maven-plugin:3.0.3:findbugs (findbugs) @ test-app ---
+[INFO] Fork Value is true
+[INFO] Done FindBugs Analysis....
+[INFO] 
+[INFO] <<< findbugs-maven-plugin:3.0.3:check (execution1) @ test-app <<<
+[INFO] 
+[INFO] --- findbugs-maven-plugin:3.0.3:check (execution1) @ test-app ---
+[INFO] BugInstance size is 0
+[INFO] Error size is 0
+[INFO] No errors/warnings found
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.398 s
+[INFO] Finished at: 2016-03-09T13:53:11+03:00
+[INFO] Final Memory: 25M/212M
+[INFO] ------------------------------------------------------------------------
+
+
+
+
+XXXXXXXX:~/IdeaProjects/maven/test/test-app$ ~/java/apache-maven-3.2.1/bin/./mvn -Pprod package
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for jmp:test-app:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-surefire-plugin is missing. @ line 59, column 29
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building test-app 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ test-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ test-app ---
+[INFO] Compiling 1 source file to /home/aliaksandr/IdeaProjects/maven/test/test-app/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ test-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ test-app ---
+[INFO] Compiling 1 source file to /home/aliaksandr/IdeaProjects/maven/test/test-app/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ test-app ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ test-app ---
+[INFO] Building jar: /home/aliaksandr/IdeaProjects/maven/test/test-app/target/test-app-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.413 s
+[INFO] Finished at: 2016-03-09T13:52:47+03:00
+[INFO] Final Memory: 15M/147M
+[INFO] ------------------------------------------------------------------------
+
+
+
+XXXXXXXX:~/IdeaProjects/maven/test/test-app$ ~/java/apache-maven-3.2.1/bin/./mvn archetype:generate
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-archetype-plugin:2.4:generate (default-cli) @ standalone-pom >>>
+[INFO] 
+[INFO] <<< maven-archetype-plugin:2.4:generate (default-cli) @ standalone-pom <<<
+[INFO] 
+[INFO] --- maven-archetype-plugin:2.4:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Interactive mode
+[INFO] No archetype defined. Using maven-archetype-quickstart (org.apache.maven.archetypes:maven-archetype-quickstart:1.0)
+Choose archetype:
+1: remote -> am.ik.archetype:maven-reactjs-blank-archetype (Blank Project for React.js)
+2: remote -> am.ik.archetype:msgpack-rpc-jersey-blank-archetype (Blank Project for Spring Boot + Jersey)
+[skip ...]
+1005: remote -> org.codehaus.mojo.archetypes:webapp-javaee6 (Archetype for a web application using Java EE 6.)
+[skip ...]
+1559: remote -> us.fatehi:schemacrawler-archetype-plugin-dbconnector (-)
+1560: remote -> us.fatehi:schemacrawler-archetype-plugin-lint (-)
+Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): 753: 1005
+Choose org.codehaus.mojo.archetypes:webapp-javaee6 version: 
+1: 1.0
+2: 1.0.1
+3: 1.0.2
+4: 1.1
+5: 1.2
+6: 1.3
+7: 1.4
+8: 1.5
+Choose a number: 8: 
+Downloading: http://repo.maven.apache.org/maven2/org/codehaus/mojo/archetypes/webapp-javaee6/1.5/webapp-javaee6-1.5.jar
+Downloaded: http://repo.maven.apache.org/maven2/org/codehaus/mojo/archetypes/webapp-javaee6/1.5/webapp-javaee6-1.5.jar (2 KB at 16.5 KB/sec)
+Downloading: http://repo.maven.apache.org/maven2/org/codehaus/mojo/archetypes/webapp-javaee6/1.5/webapp-javaee6-1.5.pom
+Downloaded: http://repo.maven.apache.org/maven2/org/codehaus/mojo/archetypes/webapp-javaee6/1.5/webapp-javaee6-1.5.pom (918 B at 10.4 KB/sec)
+Define value for property 'groupId': : maven
+Define value for property 'artifactId': : test-web
+Define value for property 'version':  1.0-SNAPSHOT: : 
+Define value for property 'package':  maven: : 
+Confirm properties configuration:
+groupId: maven
+artifactId: test-web
+version: 1.0-SNAPSHOT
+package: maven
+ Y: : Y
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Archetype: webapp-javaee6:1.5
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: maven
+[INFO] Parameter: artifactId, Value: test-web
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] Parameter: package, Value: maven
+[INFO] Parameter: packageInPathFormat, Value: maven
+[INFO] Parameter: package, Value: maven
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] Parameter: groupId, Value: maven
+[INFO] Parameter: artifactId, Value: test-web
+[INFO] project created from Archetype in dir: /home/aliaksandr/IdeaProjects/maven/test/test-web
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 54.990 s
+[INFO] Finished at: 2016-03-09T14:05:20+03:00
+[INFO] Final Memory: 17M/152M
+[INFO] ------------------------------------------------------------------------
+
+
+XXXXXXXX:~/IdeaProjects/maven/test$ ~/java/apache-maven-3.2.1/bin/./mvn tomcat7:deploy
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] test-app
+[INFO] test-web
+[INFO] parent app
+[INFO] 
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building test-app 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> tomcat7-maven-plugin:2.2:deploy (default-cli) @ test-app >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ test-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ test-app ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ test-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ test-app ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ test-app ---
+[INFO] Surefire report directory: /home/aliaksandr/IdeaProjects/maven/test/test-app/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running jmp.maven.StringUtilsTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.05 sec
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ test-app ---
+[INFO] Building jar: /home/aliaksandr/IdeaProjects/maven/test/test-app/target/test-app-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] >>> findbugs-maven-plugin:3.0.3:check (execution1) @ test-app >>>
+[INFO] 
+[INFO] --- findbugs-maven-plugin:3.0.3:findbugs (findbugs) @ test-app ---
+[INFO] Fork Value is true
+[INFO] Done FindBugs Analysis....
+[INFO] 
+[INFO] <<< findbugs-maven-plugin:3.0.3:check (execution1) @ test-app <<<
+[INFO] 
+[INFO] --- findbugs-maven-plugin:3.0.3:check (execution1) @ test-app ---
+[INFO] BugInstance size is 0
+[INFO] Error size is 0
+[INFO] No errors/warnings found
+[INFO] 
+[INFO] <<< tomcat7-maven-plugin:2.2:deploy (default-cli) @ test-app <<<
+[INFO] 
+[INFO] --- tomcat7-maven-plugin:2.2:deploy (default-cli) @ test-app ---
+[INFO] Skipping non-war project
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building test-web 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> tomcat7-maven-plugin:2.2:deploy (default-cli) @ test-web >>>
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.1:copy (default) @ test-web ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ test-web ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/aliaksandr/IdeaProjects/maven/test/test-web/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ test-web ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ test-web ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/aliaksandr/IdeaProjects/maven/test/test-web/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ test-web ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ test-web ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-war-plugin:2.1.1:war (default-war) @ test-web ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [test-web] in [/home/aliaksandr/IdeaProjects/maven/test/test-web/target/test-web-1.0-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/aliaksandr/IdeaProjects/maven/test/test-web/src/main/webapp]
+[INFO] Webapp assembled in [25 msecs]
+[INFO] Building war: /home/aliaksandr/IdeaProjects/maven/test/test-web/target/test-web-1.0-SNAPSHOT.war
+[INFO] 
+[INFO] <<< tomcat7-maven-plugin:2.2:deploy (default-cli) @ test-web <<<
+[INFO] 
+[INFO] --- tomcat7-maven-plugin:2.2:deploy (default-cli) @ test-web ---
+[INFO] Deploying war to http://localhost:8080/mvnWebApp  
+Uploading: http://localhost:8080/manager/text/deploy?path=%2FmvnWebApp
+Uploaded: http://localhost:8080/manager/text/deploy?path=%2FmvnWebApp (5 KB)
+
+[INFO] tomcatManager status code:200, ReasonPhrase:OK
+[INFO] OK - Deployed application at context path /mvnWebApp
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building parent app 1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> tomcat7-maven-plugin:2.2:deploy (default-cli) @ parent >>>
+[INFO] 
+[INFO] <<< tomcat7-maven-plugin:2.2:deploy (default-cli) @ parent <<<
+[INFO] 
+[INFO] --- tomcat7-maven-plugin:2.2:deploy (default-cli) @ parent ---
+[INFO] Skipping non-war project
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] test-app .......................................... SUCCESS [  5.179 s]
+[INFO] test-web .......................................... SUCCESS [  1.167 s]
+[INFO] parent app ........................................ SUCCESS [  0.003 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.657 s
+[INFO] Finished at: 2016-03-09T17:54:04+03:00
+[INFO] Final Memory: 29M/256M
+[INFO] ------------------------------------------------------------------------
+XXXXXXXX:~/IdeaProjects/maven/test$ 
+
