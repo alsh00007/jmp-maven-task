@@ -85,6 +85,22 @@
                     <path>/mvnWebApp</path>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.jboss.as.plugins</groupId>
+                <artifactId>jboss-as-maven-plugin</artifactId>
+                <version>7.5.Final</version>
+                <configuration>
+                    <domain>
+                        <server-groups>
+                            <server-group>test-group</server-group>
+                        </server-groups>
+                    </domain>
+                    <hostname>10.6.150.158</hostname>
+                    <name>test-web-1.0-SNAPSHOT.war</name>
+                    <username>admin</username>
+                    <password>abc123</password>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
