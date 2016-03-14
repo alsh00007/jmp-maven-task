@@ -22,7 +22,7 @@ public class StringUtilsTest {
     @Test
     public void testConcatEmptySecond() throws Exception {
 
-        Assert.assertEquals("Hello ", StringUtils.concat("Hello ", "123"));
+        Assert.assertEquals("Hello ", StringUtils.concat("Hello ", ""));
     }
 
 }
