@@ -16,15 +16,6 @@ public class StringUtils {
      */
     public static String concat(String str1, String str2) {
 
-        if (str1!=null) {
-            return str1 + str2;
-        }
-
-        try {
-            return str1 + str2;
-        } catch (Exception e) {
-
-        }
-        return null;
+        return str1 + str2;
     }
 }
