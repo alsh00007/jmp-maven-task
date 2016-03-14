@@ -4,7 +4,7 @@ package jmp.maven;
  * Utility class for working with strings.
  */
 public class StringUtils {
-
+public static final String test ="fail";
     /**
      * Method for concatenation 2 strings.
      * 
